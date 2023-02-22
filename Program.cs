@@ -24,3 +24,28 @@ foreach (string s in array)
 Console.WriteLine("");
 Console.WriteLine("----------------------------------------------------");
 Console.WriteLine("");
+
+Console.WriteLine("А теперь покажем новый массив, созданный из текущего, где длина каждого элемента не превышает 3 символа!");
+
+string [] newarray = new string [counter];
+counter = 0;
+
+foreach (string s in array)
+{
+  if (s.Length <= 3)
+  {
+    
+    newarray[counter] = s;
+    counter++;
+  }
+}
+
+Console.WriteLine("");
+Console.WriteLine("----------------------------------------------------");
+Console.Write("Результат: ");
+foreach (string s in newarray)
+{
+  Console.Write($"{s} ");
+}
+Console.WriteLine("");
+Console.WriteLine("----------------------------------------------------");
